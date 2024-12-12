@@ -1,0 +1,55 @@
+header {
+  background-color: #111418;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    
+    a {
+      transition: .3s ease-in-out;
+      &:hover {
+        opacity: .6;
+        transition: .3s ease-in-out;
+      }
+    }
+    img {
+      width: auto;
+      height: 48px;
+    }
+  }
+
+  .nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .socials {
+
+    a {
+      transition: .3s ease-in-out;
+    }
+  
+    a:hover {
+      opacity: .6;
+      transition: .3s ease-in-out;
+    }
+    a img {
+      width: auto;
+      height: 24px;
+      margin-left: 20px;
+    }
+  } 
+}

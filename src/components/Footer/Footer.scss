@@ -1,0 +1,68 @@
+footer {
+    background-color: #111418;
+  
+    .footer-btn-contain {
+      margin-top: -80px;
+      padding-bottom: 80px;
+      padding-top: 0;
+  
+      .download-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background-color: #293038;
+        color: #fff;
+        border-radius: 24px;
+        cursor: pointer;
+        font-weight: 600;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .download-button:hover {
+        background-color: #20336b;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      h3 {
+        font-family: "Orpheus Pro";
+        text-align: center;
+        font-size: 3.3em;
+      }
+  
+      hr {
+        margin: 50px 0;
+        color: #eee;
+      }
+    
+      .f-socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    
+        a {
+          transition: .3s ease-in-out;
+        }
+      
+        a:hover {
+          opacity: .6;
+          transition: .3s ease-in-out;
+        }
+        a img {
+          width: auto;
+          height: 24px;
+        }
+      } 
+    }
+  }
+
+  @media (max-width: 699px) {
+    .footer-btn-contain {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }

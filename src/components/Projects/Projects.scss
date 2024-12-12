@@ -1,0 +1,124 @@
+#projects {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .inner-contain {
+    margin: 0 100px;
+  }
+
+  h2 {
+    color: #282828;
+
+    &::after {
+      color: #282828;
+    }
+  }
+
+  .skills-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .skill {
+    background-color: #6f6f6f;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      color: #fff;
+      background-color: #111418;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #20336b;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+      flex: 0 0 calc((100% - 60px) / 4);
+      box-sizing: border-box;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .project-card {
+    background-color: #293038;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    height: 325px;
+    color: white;
+    text-align: left;
+    width: 100%;
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .section-transition-top {
+    margin-bottom: -13%;
+  }
+
+  .section-transition-bot {
+    margin-top: -13%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-grid a {
+    min-width: 48%;
+  }
+
+  .inner-contain {
+    margin: 0 80px;
+  }
+
+  .section-transition-top {
+    margin-bottom: -10%;
+  }
+
+  .section-transition-bot {
+    margin-top: -10%;
+  }
+}
+
+@media (max-width: 699px) {
+  .projects-grid a {
+    min-width: 100%;
+  }
+  #projects .inner-contain {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}

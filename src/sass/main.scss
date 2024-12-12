@@ -1,0 +1,121 @@
+@use '../components/Header/Header.scss';
+@use '../components/Hero/Hero.scss';
+@use '../components/Projects/Projects.scss';
+@use '../components/Experience/Experience.scss';
+@use '../components/Footer/Footer.scss';
+
+/* Fonts */
+@font-face {
+  font-family: "Orpheus Pro";
+  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot");
+  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.svg#Orpheus Pro")format("svg");
+}
+
+
+/* Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111418;
+  color: white;
+}
+
+section {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 115px 20px;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Orpheus Pro"; 
+  font-size: 6em;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-family: "Orpheus Pro"; 
+  font-size: 2.5em;
+  position: relative;
+  margin: 0 0 35px 0;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-right: 42px;
+  display: inline-flex;
+  align-items: center;
+  &::after {
+    content: '→';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: #b9b9b9;
+    transition: transform 0.3s ease;
+  }
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0 0 15px 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0 0 15px 0;
+}
+
+/* Button styles */
+.btn {
+  background-color: #293038;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: .5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #20336b; 
+  }
+
+  &:active {
+    background-color: #20336b; 
+  }
+}
+
+/* Section Dividers */
+.section-transition-top,
+  .section-transition-bot {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .section-transition-top {
+    margin-bottom: -200px;
+  }
+  
+  .section-transition-bot {
+    margin-top: -200px;
+  }
