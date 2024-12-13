@@ -15,6 +15,13 @@ export default function Hero() {
     });
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero">
       <div className="about-flex container">
@@ -25,8 +32,8 @@ export default function Hero() {
             With a strong foundation in both front-end and back-end development, I specialize in creating seamless user experiences and robust web applications. I've honed my skills in various programming languages and frameworks, allowing me to bring ideas to life efficiently and effectively.
           </p>
           <div className="btn-align">
-            <a href="#projects" className="btn">My Projects</a>
-            <a href="#work-experience" className="btn">My Past Experience</a>
+            <button onClick={() => scrollToSection('projects')} className="btn">My Projects</button>
+            <button onClick={() => scrollToSection('work-experience')} className="btn">My Past Experience</button>
           </div>
         </div>
         <div className="profile-container secondary">

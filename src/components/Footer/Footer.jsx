@@ -2,12 +2,23 @@ import React from 'react';
 import './Footer.scss';
 import githubLogo from '../../assets/webp/github-logo.webp';
 import linkedinLogo from '../../assets/webp/linkedin-logo.webp';
+import resumeFile from '../../assets/my-experience.pdf'; // Import your PDF file
 
 export default function Footer() {
+  const handleDownload = () => {
+    // Create a temporary link
+    const link = document.createElement('a');
+    link.href = resumeFile; // Path to your PDF file
+    link.download = 'my-experience.pdf'; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer>
       <section className="footer-btn-contain">
-        <button className="download-button">
+        <button className="download-button" onClick={handleDownload}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
