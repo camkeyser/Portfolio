@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Projects.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +16,7 @@ import peaksBot from '../../assets/webp/peaks-bot.webp';
 
 export default function Projects() {
   const [activeSkill, setActiveSkill] = useState('all');
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const skills = [
     'All',
@@ -32,24 +35,28 @@ export default function Projects() {
       skills: ['JavaScript', 'PHP', 'GSAP', 'SASS', 'Three.js'],
       image: wpImage,
       link: 'https://wp.camkeyser.com/',
+      ghLink: 'https://github.com/camkeyser/custom-dev-theme',
     },
     {
       title: 'Solar System App',
       skills: ['JavaScript', 'React', 'Three.js', 'REST API', 'SASS'],
       image: spaceImage,
       link: 'https://space.camkeyser.com/',
+      ghLink: '',
     },
     {
       title: 'My Feed - Dashboard',
       skills: ['JavaScript', 'SASS', 'React', 'REST API', 'GSAP'],
       image: feedImage,
       link: 'https://feed.camkeyser.com/',
+      ghLink: 'https://github.com/camkeyser/my-dashboard',
     },
     {
       title: 'Animation Sandbox',
       skills: ['JavaScript', 'SASS', 'React', 'Three.js', 'GSAP'],
       image: animImage,
       link: '',
+      ghLink: '',
     },
   ];
 
@@ -58,6 +65,7 @@ export default function Projects() {
   };
 
   useEffect(() => {
+    setIsAnimating(true);
     gsap.from('.project-card', {
       scrollTrigger: {
         trigger: '.projects-grid',
@@ -70,6 +78,7 @@ export default function Projects() {
       duration: 1,
       stagger: 0.2,
       delay: 0.5,
+      onComplete: () => setIsAnimating(false),
     });
 
     ScrollTrigger.refresh();
@@ -80,7 +89,47 @@ export default function Projects() {
   }, [activeSkill]);
 
   const handleSkillClick = (skill) => {
+    if (isAnimating) return;
     setActiveSkill(slugify(skill));
+  };
+
+  const getModalContent = (project) => {
+    if (project.title === 'Animation Sandbox') {
+      return `
+        <div style="padding: 20px; text-align: center;">
+          <h3 style="margin-bottom: 15px;">Animation Sandbox</h3>
+          <p>This is currently a work in progress. Updates will come shortly.</p>
+        </div>
+      `;
+    }
+    if (project.title === 'Solar System App') {
+      return `
+        <div style="padding: 20px; text-align: center;">
+          <h3 style="margin-bottom: 15px;">${project.title}</h3>
+          <div class="m-img-box"><img src="${project.image}"></div>
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">
+              View Project
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <div style="padding: 20px; text-align: center;">
+        <h3 style="margin-bottom: 15px;">${project.title}</h3>
+        <div class="m-img-box"><img src="${project.image}"></div>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">
+            View Project
+          </a>
+          <a href="${project.ghLink}" target="_blank" rel="noopener noreferrer" class="btn secondary">
+            View Github
+          </a>
+        </div>
+      </div>
+    `;
   };
 
   const filteredProjects = projects.filter(
@@ -114,11 +163,17 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           {filteredProjects.map((project) => (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+            <div
               key={project.title}
+              onClick={(e) => {
+                e.preventDefault();
+                Fancybox.show([
+                  {
+                    src: getModalContent(project),
+                    type: "html",
+                  },
+                ]);
+              }}
             >
               <div
                 className="project-card"
@@ -127,7 +182,7 @@ export default function Projects() {
               >
                 <p className="project-title">{project.title}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
