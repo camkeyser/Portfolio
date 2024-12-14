@@ -20,9 +20,9 @@ export default function Experience() {
           <p className="experience-company">R&R Partners</p>
           <p className="experience-dates">Jun 2022 - Oct 2024 • Las Vegas, NV</p>
           <p className="experience-description">
-            - Full Stack Developer responsible for managing and maintaining many client websites.<br />
-            - Contributed to high-profile projects for major clients, including Paramount, Boeing, Bally's, and various Las Vegas-based companies.<br />
-            - Collaborated across departments to develop solutions tailored to client needs.
+            • Full Stack Developer responsible for managing and maintaining many client websites.<br />
+            • Contributed to high-profile projects for well-known clients, including Paramount, Boeing, Nickelodeon, Parents Empowered, and various Las Vegas-based companies.<br />
+            • Collaborated with teams from different areas to design and implement solutions that aligned with client needs
           </p>
         </div>
       </div>
@@ -36,9 +36,9 @@ export default function Experience() {
           <p className="experience-company">Oozle Media</p>
           <p className="experience-dates">Sep 2020 - Jun 2022 • South Jordan, UT</p>
           <p className="experience-description">
-            - Lead Developer responsible for managing and maintaining 50+ client websites.<br />
-            - Handled routine updates, maintenance, and technical fixes to ensure optimal site performance.<br />
-            - Streamlined workflows to improve the efficiency of site updates and deployments.
+            • Lead Developer responsible for managing and maintaining 50+ client websites.<br />
+            • Handled routine updates, maintenance, and technical fixes to ensure optimal site performance.<br />
+            • Streamlined workflows to improve the efficiency of site updates and deployments.
           </p>
         </div>
       </div>
@@ -52,8 +52,8 @@ export default function Experience() {
           <p className="experience-company">Nfinite Sites</p>
           <p className="experience-dates">Feb 2019 - Jan 2021 • Draper, Utah</p>
           <p className="experience-description">
-            - Design, develop, and maintain several small business websites.<br />
-            - Implement SEO and marketing campaigns.
+            • Design, develop, and maintain several small business websites.<br />
+            • Implement SEO and marketing campaigns.
           </p>
         </div>
       </div>
@@ -67,9 +67,9 @@ export default function Experience() {
           <p className="experience-company">Business Promotion</p>
           <p className="experience-dates">Oct 2016 - Feb 2019 • American Fork, UT</p>
           <p className="experience-description">
-            - Built and maintained custom websites for a large number of clients (100+).<br />
-            - Assisted in building custom dashboards for various departments in the company (e.g., Retention, Sales, Team Stat Dashboards).<br />
-            - Collaborated directly with business owners when making changes or building new sites.
+            • Built and maintained custom websites for a large number of clients (100+).<br />
+            • Assisted in building custom dashboards for various departments in the company (e.g., Retention, Sales, Team Stat Dashboards).<br />
+            • Collaborated directly with business owners when making changes or building new sites.
           </p>
         </div>
       </div>
@@ -83,8 +83,8 @@ export default function Experience() {
           <p className="experience-company">Boostability</p>
           <p className="experience-dates">Jan 2015 - Sep 2016 • Lindon, UT</p>
           <p className="experience-description">
-            - Provided project management for 40-50 website accounts, including gathering requests for the website build and post-launch maintenance.<br />
-            - Assisted the development team in creating websites based on information gathered through conference calls and web trainings.
+            • Provided project management for 40-50 website accounts, including gathering requests for the website build and post-launch maintenance.<br />
+            • Assisted the development team in creating websites based on information gathered through conference calls and web trainings.
           </p>
         </div>
       </div>

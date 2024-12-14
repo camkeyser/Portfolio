@@ -27,9 +27,9 @@ export default function Hero() {
       <div className="about-flex container">
         <div className="profile-container primary">
           <h1>Cam Keyser</h1>
-          <h2>I'm a fullstack developer with a background in web design.</h2>
+          <h2>I’m a full-stack developer dedicated to creating seamless, innovative digital solutions.</h2>
           <p className="flex-item">
-            With a strong foundation in both front-end and back-end development, I specialize in creating seamless user experiences and robust web applications. I've honed my skills in various programming languages and frameworks, allowing me to bring ideas to life efficiently and effectively.
+          With experience in both front-end and back-end development, I enjoy tackling complex problems and creating reliable, user-friendly solutions. I’ve worked with a variety of modern programming languages and frameworks, which helps me bring ideas to life as functional and polished applications.
           </p>
           <div className="btn-align">
             <button onClick={() => scrollToSection('projects')} className="btn">My Projects</button>
