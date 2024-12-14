@@ -32,7 +32,7 @@ export default function Projects() {
   const projects = [
     {
       title: 'WordPress Theme',
-      skills: ['JavaScript', 'PHP', 'GSAP', 'SASS', 'Three.js'],
+      skills: ['JavaScript', 'PHP', 'GSAP'],
       image: wpImage,
       link: 'https://wp.camkeyser.com/',
       ghLink: 'https://github.com/camkeyser/custom-dev-theme',
