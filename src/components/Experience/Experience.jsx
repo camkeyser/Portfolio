@@ -73,21 +73,6 @@ export default function Experience() {
           </p>
         </div>
       </div>
-
-      <div className="experience-item">
-        <div className="experience-icon">
-          <img src={boost} alt="Oozle Media" />
-        </div>
-        <div className="experience-content">
-          <p className="experience-title">Website Consultant / Website Maintenance</p>
-          <p className="experience-company">Boostability</p>
-          <p className="experience-dates">Jan 2015 - Sep 2016 • Lindon, UT</p>
-          <p className="experience-description">
-            • Provided project management for 40-50 website accounts, including gathering requests for the website build and post-launch maintenance.<br />
-            • Assisted the development team in creating websites based on information gathered through conference calls and web trainings.
-          </p>
-        </div>
-      </div>
     </section>
   );
 }
