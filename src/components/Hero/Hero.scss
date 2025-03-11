@@ -26,7 +26,7 @@
     .profile-container {
       position: relative;
       &.primary {
-        width: 52%;
+        width: 48%;
       }
       &.secondary {
         position: relative;
@@ -42,7 +42,7 @@
         pointer-events: none; 
         position: relative;
         height: 130%;
-        animation: fadeIn 1.85s ease-in-out forwards;
+        animation: fadeIn 2.8s ease-in-out forwards;
       }
       img.flex-item {
         position: absolute;
@@ -75,7 +75,7 @@
   45% {
     opacity: 0.35;
   }
-  60% {
+  60% { 
     opacity: 1;
   }
   100% {
@@ -83,23 +83,58 @@
   }
 }
 
-@media (max-width: 1025px) {
-  #hero .about-flex {
-    flex-direction: column-reverse;
-  }
-  #hero .about-flex .profile-container.primary {
-    width: 100%;
-  }
-  #hero .about-flex .profile-container.secondary {
-    width: 42%;
-    align-self: flex-start;
-  }
+@media (max-width: 1850px) {
   #hero {
-    padding: 65px 20px 115px;
+    .about-flex .profile-container.primary {
+      width: 33%;
+    }
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 1500px) {
+  #hero {
+  padding: 65px 20px 115px;
+  iframe {
+    right: 0;
+    top: 0;
+    transform: none;
+    height: 650px;
+    width: 100%;
+  }
+  .about-flex {
+    flex-direction: column-reverse;
+    .profile-container {
+      &.primary {
+        width: 100%;
+      }
+      &.secondary {
+        width: 100%;
+        align-self: flex-start;
+      }
+      #lottie-animation {
+        height: 105%;
+        transform: translateX(70px);
+      }
+    }
+  }
+  }
+}
+
+@media (max-width: 980px) {
+  #hero .about-flex .profile-container #lottie-animation {
+    height: 100%;
+    transform: translateX(40px);
+  }
+}
+
+@media (max-width: 780px) {
+  #hero .about-flex .profile-container #lottie-animation {
+    height: 100%;
+    transform: translateX(40px);
+  }
+}
+
+@media (max-width: 650px) {
   #hero {
     margin: 0 auto;
     max-width: 90%;

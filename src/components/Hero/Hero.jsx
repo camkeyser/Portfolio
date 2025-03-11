@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="about-flex container">
         <div className="profile-container primary">
           <h1>Cam Keyser</h1>
-          <h2>I’m a full-stack developer dedicated to creating seamless, innovative digital solutions.</h2>
+          <h2>I'm a full-stack developer dedicated to creating seamless, innovative digital solutions.</h2>
           <p className="flex-item">
             With experience in both front-end and back-end development, I enjoy tackling complex problems and creating reliable, user-friendly solutions. I've worked with a variety of modern programming languages and frameworks, which helps me bring ideas to life as functional and polished applications.
           </p>
