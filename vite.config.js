@@ -4,6 +4,9 @@ import compression from 'vite-plugin-compression';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
+  define: {
+    __APP_VERSION__: JSON.stringify(new Date().getTime()),
+  },
   plugins: [
     react(),
     svgr(),
