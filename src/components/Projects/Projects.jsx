@@ -9,7 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 import wpImage from '../../assets/wp-mu.jpg';
 import spaceImage from '../../assets/space-mu.jpg';
-import animImage from '../../assets/animation-mu.jpg';
+// import animImage from '../../assets/animation-mu.jpg';
+import landingImage from '../../assets/muzica-mu.jpg';
 import feedImage from '../../assets/feed-mu.jpg';
 import peaksTop from '../../assets/webp/peaks-top.webp';
 import peaksBot from '../../assets/webp/peaks-bot.webp';
@@ -31,6 +32,13 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'App Landing Page',
+      skills: ['JavaScript', 'PHP'],
+      image: landingImage,
+      link: 'https://lp.camkeyser.com/',
+      ghLink: 'https://github.com/camkeyser/triton',
+    },
+    {
       title: 'WordPress Theme',
       skills: ['JavaScript', 'PHP', 'GSAP'],
       image: wpImage,
@@ -51,13 +59,13 @@ export default function Projects() {
       link: 'https://feed.camkeyser.com/',
       ghLink: 'https://github.com/camkeyser/my-dashboard',
     },
-    {
-      title: 'Animation Sandbox',
-      skills: ['JavaScript', 'SASS', 'React', 'Three.js', 'GSAP'],
-      image: animImage,
-      link: '',
-      ghLink: '',
-    },
+    // {
+    //   title: 'Animation Sandbox',
+    //   skills: ['JavaScript', 'SASS', 'React', 'Three.js', 'GSAP'],
+    //   image: animImage,
+    //   link: '',
+    //   ghLink: '',
+    // },
   ];
 
   const slugify = (text) => {
