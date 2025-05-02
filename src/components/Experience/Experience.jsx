@@ -19,11 +19,17 @@ export default function Experience() {
           <p className="experience-title">Digital Developer</p>
           <p className="experience-company">R&R Partners</p>
           <p className="experience-dates">Jun 2022 - Oct 2024 • Las Vegas, NV</p>
-          <p className="experience-description">
-            • Full Stack Developer responsible for managing and maintaining many client websites.<br />
-            • Contributed to high-profile projects for well-known clients, including Paramount, Boeing, Nickelodeon, Parents Empowered, and various Las Vegas-based companies.<br />
-            • Collaborated with teams from different areas to design and implement solutions that aligned with client needs
-          </p>
+          <ul className="experience-description">
+            <li>
+              Full Stack Developer responsible for managing and maintaining several client websites, ensuring optimal performance and user experience across all platforms.
+            </li>
+            <li>
+              Contributed to high-profile projects for well-known clients, including Paramount, Boeing, Nickelodeon, Parents Empowered, and various Las Vegas-based companies, delivering custom solutions that met specific business requirements.
+            </li>
+            <li>
+              Collaborated with cross-functional teams from design, marketing, and business development to create and implement technical solutions that aligned with client needs and brand strategies.
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -35,11 +41,24 @@ export default function Experience() {
           <p className="experience-title">Full Stack Developer</p>
           <p className="experience-company">Oozle Media</p>
           <p className="experience-dates">Sep 2020 - Jun 2022 • South Jordan, UT</p>
-          <p className="experience-description">
-            • Lead Developer responsible for managing and maintaining 50+ client websites.<br />
-            • Handled routine updates, maintenance, and technical fixes to ensure optimal site performance.<br />
-            • Streamlined workflows to improve the efficiency of site updates and deployments.
-          </p>
+          <ul className="experience-description">
+            <li>
+              Built and customized 35+ WordPress-based websites utilizing Advanced Custom Fields, creating a content management system tailored to each
+              client's specific needs.
+            </li>
+            <li>
+              Maintained all new and previously created websites, implementing regular updates, security patches, and feature enhancements to ensure
+              functionality.
+            </li>
+            <li>
+              Performed hosting migrations and website deployments across various environments, minimizing downtime and ensuring consistent
+              performance.
+            </li>
+            <li>
+              Optimized websites to meet performance compliance standards (e.g., Core Web Vitals), improving page load speeds, mobile responsiveness, and
+              overall user experience metrics. All websites performed above 90% on speed and accessibility tests.
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -48,13 +67,22 @@ export default function Experience() {
           <img src={nfinite} alt="Oozle Media" />
         </div>
         <div className="experience-content">
-          <p className="experience-title">Owner / Developer / Designer</p>
+          <p className="experience-title">Full Stack Developer</p>
           <p className="experience-company">Nfinite Sites</p>
           <p className="experience-dates">Feb 2019 - Jan 2021 • Draper, Utah</p>
-          <p className="experience-description">
-            • Design, develop, and maintain several small business websites.<br />
-            • Implement SEO and marketing campaigns.
-          </p>
+          <ul className="experience-description">
+            <li>
+              Designed, developed, and supported around 15 websites for small businesses, creating custom solutions that balanced user-friendly interfaces and
+              responsive design.
+            </li>
+            <li>
+              Implemented email and SEO marketing campaigns that increased client visibility, improved search rankings, and generated increases in customer
+              engagement.
+            </li>
+            <li>
+              Provided ongoing technical support and provided bi-monthly plugin and theme updates where needed.
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -66,11 +94,24 @@ export default function Experience() {
           <p className="experience-title">Full Stack Developer / Technical Support</p>
           <p className="experience-company">Business Promotion</p>
           <p className="experience-dates">Oct 2016 - Feb 2019 • American Fork, UT</p>
-          <p className="experience-description">
-            • Built and maintained custom websites for a large number of clients (100+).<br />
-            • Assisted in building custom dashboards for various departments in the company (e.g., Retention, Sales, Team Stat Dashboards).<br />
-            • Collaborated directly with business owners when making changes or building new sites.
-          </p>
+          <ul className="experience-description">
+            <li>
+              Developed and managed custom websites for a large number of clients (100+), delivering tailored solutions that addressed unique business
+              requirements and technical specifications across diverse industries.
+            </li>
+            <li>
+              Assisted in building ~20 custom dashboards for various departments in the company (e.g., Retention, Sales, Team Stat Dashboards, etc.),
+              transforming complex data into actionable information to increase team efficiency.
+            </li>
+            <li>
+              Collaborated directly with business owners when making changes or when building a new site, ensuring clear communication throughout project
+              cycles.
+            </li>
+            <li>
+              Implemented efficient workflow processes such as batch image processing and re-usable template code blocks, which resulted in site build times
+              being reduced to 50%.
+            </li>
+          </ul>
         </div>
       </div>
     </section>

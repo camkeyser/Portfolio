@@ -50,6 +50,11 @@
         margin-top: 5px;
         color: #cccccc;
         line-height: 1.8;
+        width: 85%;
+        max-width: 1000px;
+        li {
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -72,11 +77,16 @@
   }
 }
 
+@media (max-width: 1111px) {
+  #work-experience .experience-item .experience-content .experience-description {
+    width: 100%;
+  }
+}
+
 @media (max-width: 699px) {
   #work-experience {
     margin: 0 auto;
     max-width: 90%;
     padding: 115px 0;
   }
-
 }
