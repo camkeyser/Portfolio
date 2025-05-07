@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-divider">
-        <button onClick={() => scrollToSection('projects')} className="btn">Projects</button>
+        <button onClick={() => scrollToSection('anchor-projects')} className="btn">Projects</button>
         |
         <button onClick={() => scrollToSection('work-experience')} className="btn">Resume</button>
       </div>

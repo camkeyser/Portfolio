@@ -154,7 +154,7 @@ export default function Projects() {
         className="section-transition-top"
       />
       <div className="inner-contain">
-        <h2>Projects</h2>
+        <h2 id="anchor-projects">Projects</h2>
         <div className="skills-filter">
           {skills.map((skill) => (
             <div
