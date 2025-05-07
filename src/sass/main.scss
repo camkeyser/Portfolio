@@ -117,5 +117,9 @@ h4 {
   @media (max-width: 1000px) {
     h2 {
       font-size: 2em;
+
+      &::after {
+        top: 3px;
+      }
     }
   }
