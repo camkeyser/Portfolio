@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/Hero/Hero.jsx';
+import Intro from './components/Intro/Intro.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import Experience from './components/Experience/Experience.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -10,6 +11,7 @@ const App = () => (
   <>
     <Header />
     <Hero />
+    <Intro />
     <Projects />
     <Experience />
     <Footer />

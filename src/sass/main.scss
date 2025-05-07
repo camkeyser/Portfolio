@@ -3,18 +3,7 @@
 @use '../components/Projects/Projects.scss';
 @use '../components/Experience/Experience.scss';
 @use '../components/Footer/Footer.scss';
-
-/* Fonts */
-@font-face {
-  font-family: "Orpheus Pro";
-  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot");
-  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.svg#Orpheus Pro")format("svg");
-}
-
+@use '../components/Intro/Intro.scss';
 
 /* Global Styles */
 *, *::before, *::after {
@@ -36,7 +25,7 @@ body {
 section {
   margin-left: 100px;
   margin-right: 100px;
-  padding: 115px 20px;
+  padding: 150px 0;
 }
 
 .container {
@@ -45,13 +34,16 @@ section {
 }
 
 h1 {
-  font-family: "Orpheus Pro"; 
-  font-size: 6em;
+  font-family: "EB Garamond", serif;
+  font-size: 8em;
+  font-weight: 300;
   margin: 0 0 20px 0;
+  transform: translateX(-3px);
+  line-height: 1;
 }
 
 h2 {
-  font-family: "Orpheus Pro"; 
+  font-family: "EB Garamond", serif;
   font-size: 2.5em;
   position: relative;
   margin: 0 0 35px 0;
@@ -60,11 +52,12 @@ h2 {
   padding-right: 42px;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
   &::after {
     content: '→';
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5px;
     font-size: 2rem;
     color: #b9b9b9;
     transition: transform 0.3s ease;
@@ -118,4 +111,11 @@ h4 {
   
   .section-transition-bot {
     margin-top: -200px;
+  }
+
+  // Media Queries
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 2em;
+    }
   }

@@ -1,10 +1,17 @@
 #hero {
   position: relative;
+  padding: 150px 100px;
+  margin: 0;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h2 {
-    font-family: 'Inter', 'Noto Sans', sans-serif;
-    font-size: 1.6em;
-    margin: 0;
+    font-family: "EB Garamond", serif;
+    font-size: 2.2em;
+    font-weight: 100;
+    margin: 0 0 15px 0;
     padding-right: 0;
     &::after {
       display: none;
@@ -16,52 +23,66 @@
     line-height: 1.6;
     max-width: 800px;
     color: #d1d5db;
+    font-weight: 300;
   }
 
   .about-flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 35px;
+    justify-content: center;
+
+    h3 {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
     .profile-container {
       position: relative;
+      text-align: center;
+
       &.primary {
-        width: 48%;
-      }
-      &.secondary {
-        position: relative;
-        width: 42%;
-        height: 475px;
+        width: 100%;
+        max-width: 850px;
       }
       .btn-align {
         margin-top: 30px;
         display: flex;
         gap: 20px;
       }
-      #lottie-animation {
-        pointer-events: none; 
-        position: relative;
-        height: 130%;
-        animation: fadeIn 2.8s ease-in-out forwards;
-      }
-      img.flex-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9;
+    }
+    .hero-socials {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      justify-content: center;
+      .social-link {
+        color: #fff;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        display: flex;
+        align-items: center;
+    
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }
-  iframe {
+  .hero-divider {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(15%, -50%);
-    height: 700px;
-    width: 65%;
-    animation: fadeIn 1.85s ease-in-out forwards;
+    bottom: 0;
+    background: #15223e80;
+    width: 100%;
+    left: 0;
+    text-align: center;
+
+    .btn {
+      background: none;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
 } 
 
@@ -83,99 +104,150 @@
   }
 }
 
-@media (max-width: 1850px) {
+// Starfield Background
+@function multiple-box-shadow($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
+  }
+  @return unquote($value);
+}
+
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
+#hero {
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(ellipse at bottom, #111418 0%, #090A0F 100%);
+
+  #stars, #stars2, #stars3 {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  #stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar 50s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $shadows-small;
+    }
+  }
+
+  #stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar 100s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $shadows-medium;
+    }
+  }
+
+  #stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar 150s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $shadows-big;
+    }
+  }
+
+  @keyframes animStar {
+    from { transform: translateY(0px); }
+    to   { transform: translateY(-2000px); }
+  }
+}
+
+#hero > .about-flex,
+#hero > .profile-container,
+#hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+// Media Queries
+@media (max-width: 820px) {
+  h1 {
+    font-size: 5.5em;
+  }
+}
+
+@media (max-width: 775px) {
+  #hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #hero .about-flex h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 615px) {
   #hero {
-    .about-flex .profile-container.primary {
-      width: 33%;
-    }
+    padding: 150px 50px;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+  #hero h2 {
+    font-size: 2em;
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 445px) {
   #hero {
-  padding: 65px 20px 115px;
-  iframe {
-    right: 0;
-    top: 0;
-    transform: none;
-    height: 650px;
-    width: 100%;
+    padding: 150px 35px;
   }
-  .about-flex {
-    flex-direction: column-reverse;
-    .profile-container {
-      &.primary {
-        width: 100%;
-      }
-      &.secondary {
-        width: 100%;
-        align-self: flex-start;
-      }
-      #lottie-animation {
-        height: 105%;
-        transform: translateX(70px);
-      }
-    }
+  h1 {
+    font-size: 3.7rem;
   }
+  #hero h2 {
+    font-size: 1.7em;
   }
 }
 
-@media (max-width: 980px) {
-  #hero .about-flex .profile-container #lottie-animation {
-    height: 100%;
-    transform: translateX(40px);
+@media (max-width: 420px) {
+  #hero .about-flex h3 {
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 780px) {
-  #hero .about-flex .profile-container #lottie-animation {
-    height: 100%;
-    transform: translateX(40px);
-  }
-}
-
-@media (max-width: 650px) {
-  #hero {
-    margin: 0 auto;
-    max-width: 90%;
-
-    h1 {
-      font-size: 4.5em;
-    }
-    h2 {
-      font-size: 1.4em;
-      letter-spacing: 0;
-    }
-    p {
-      font-size: 1em;
-      line-height: 1.6;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  #hero .about-flex .profile-container.secondary {
-    width: 70%;
-    align-self: center;
-  }
-  #hero {
-    padding: 30px 0 115px;
-  }
-}
-
-@media (max-width: 475px) {
-  .btn {
-    color: #fff;
-    padding: 12px 15px;
-    font-size: 0.9rem;
-    letter-spacing: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  #hero {
-    h1 {
-      font-size: 4em;
-    }
+@media (max-width: 390px) {
+  h1 {
+    font-size: 3.5rem;
   }
 }
