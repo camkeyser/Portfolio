@@ -44,24 +44,24 @@
   }
 
   .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 
-    > div {
-      text-decoration: none;
+  > a {
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    flex: 0 0 calc((100% - 60px) / 4);
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
       transition: 0.2s ease-in-out;
-      flex: 0 0 calc((100% - 60px) / 4);
-      box-sizing: border-box;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.05);
-        transition: 0.2s ease-in-out;
-      }
     }
   }
+}
 
   .project-card {
     background-color: #293038;
@@ -142,7 +142,7 @@ body .is-compact .fancybox__content {
 
 @media (max-width: 1200px) {
   #projects {
-    .projects-grid > div {
+    .projects-grid > a {
       min-width: 48%;
     }
     
@@ -162,7 +162,7 @@ body .is-compact .fancybox__content {
 
 @media (max-width: 699px) {
   #projects {
-    .projects-grid > div {
+    .projects-grid > a {
       min-width: 100%;
     }
     

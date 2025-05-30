@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './Projects.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 import wpImage from '../../assets/wp-mu.jpg';
 import spaceImage from '../../assets/space-mu.jpg';
-// import animImage from '../../assets/animation-mu.jpg';
-import landingImage from '../../assets/muzica-mu.jpg';
+import landingImage from '../../assets/lp-mu.jpg';
+// import landingImage from '../../assets/muzica-mu.jpg';
 import feedImage from '../../assets/feed-mu.jpg';
 import peaksTop from '../../assets/webp/peaks-top.webp';
 import peaksBot from '../../assets/webp/peaks-bot.webp';
+import kanbanImage from '../../assets/kanban-mu.jpg';
 
 export default function Projects() {
   const [activeSkill, setActiveSkill] = useState('all');
@@ -27,7 +26,7 @@ export default function Projects() {
     'Three.js',
     'REST API',
     'GSAP',
-    'SASS',
+    'SCSS',
   ];
 
   const projects = [
@@ -46,26 +45,26 @@ export default function Projects() {
       ghLink: 'https://github.com/camkeyser/custom-dev-theme',
     },
     {
-      title: 'Solar System App',
-      skills: ['JavaScript', 'React', 'Three.js', 'REST API', 'SASS'],
-      image: spaceImage,
-      link: 'https://space.camkeyser.com/',
+      title: 'Kanban Board',
+      skills: ['JavaScript', 'React', 'SCSS'],
+      image: kanbanImage,
+      link: 'https://kanban.camkeyser.com/',
       ghLink: '',
     },
     {
       title: 'My Feed - Dashboard',
-      skills: ['JavaScript', 'SASS', 'React', 'REST API', 'GSAP'],
+      skills: ['JavaScript', 'SCSS', 'React', 'REST API', 'GSAP'],
       image: feedImage,
       link: 'https://feed.camkeyser.com/',
       ghLink: 'https://github.com/camkeyser/my-dashboard',
     },
-    // {
-    //   title: 'Animation Sandbox',
-    //   skills: ['JavaScript', 'SASS', 'React', 'Three.js', 'GSAP'],
-    //   image: animImage,
-    //   link: '',
-    //   ghLink: '',
-    // },
+    {
+      title: 'Solar System App',
+      skills: ['JavaScript', 'React', 'Three.js', 'REST API', 'SCSS'],
+      image: spaceImage,
+      link: 'https://space.camkeyser.com/',
+      ghLink: '',
+    },
   ];
 
   const slugify = (text) => {
@@ -101,45 +100,6 @@ export default function Projects() {
     setActiveSkill(slugify(skill));
   };
 
-  const getModalContent = (project) => {
-    if (project.title === 'Animation Sandbox') {
-      return `
-        <div style="padding: 20px; text-align: center;">
-          <h3 style="margin-bottom: 15px;">Animation Sandbox</h3>
-          <p>This is currently a work in progress. Updates will come shortly.</p>
-        </div>
-      `;
-    }
-    if (project.title === 'Solar System App') {
-      return `
-        <div style="padding: 20px; text-align: center;">
-          <h3 style="margin-bottom: 15px;">${project.title}</h3>
-          <div class="m-img-box"><img src="${project.image}"></div>
-          <div style="display: flex; gap: 10px; justify-content: center;">
-            <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">
-              View Project
-            </a>
-          </div>
-        </div>
-      `;
-    }
-
-    return `
-      <div style="padding: 20px; text-align: center;">
-        <h3 style="margin-bottom: 15px;">${project.title}</h3>
-        <div class="m-img-box"><img src="${project.image}"></div>
-        <div style="display: flex; gap: 10px; justify-content: center;">
-          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">
-            View Project
-          </a>
-          <a href="${project.ghLink}" target="_blank" rel="noopener noreferrer" class="btn secondary">
-            View Github
-          </a>
-        </div>
-      </div>
-    `;
-  };
-
   const filteredProjects = projects.filter(
     (project) =>
       activeSkill === 'all' ||
@@ -171,17 +131,11 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           {filteredProjects.map((project) => (
-            <div
+            <a
               key={project.title}
-              onClick={(e) => {
-                e.preventDefault();
-                Fancybox.show([
-                  {
-                    src: getModalContent(project),
-                    type: "html",
-                  },
-                ]);
-              }}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div
                 className="project-card"
@@ -190,7 +144,7 @@ export default function Projects() {
               >
                 <p className="project-title">{project.title}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
