@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 import wpImage from '../../assets/wp-mu.jpg';
 import spaceImage from '../../assets/space-mu.jpg';
 import landingImage from '../../assets/lp-mu.jpg';
-// import landingImage from '../../assets/muzica-mu.jpg';
 import feedImage from '../../assets/feed-mu.jpg';
 import peaksTop from '../../assets/webp/peaks-top.webp';
 import peaksBot from '../../assets/webp/peaks-bot.webp';
