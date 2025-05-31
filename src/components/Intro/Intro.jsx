@@ -15,7 +15,10 @@ export default function Intro() {
               <h2>About Me</h2>
           </div>
           <div className="intro-left">
-              <img src={myImg} alt="Cam Keyser Photo" />
+            <div className="sparkle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 80 80" width="200" height="200" fill="#111418"><polygon points="54.9,51.8 85.8,46.1 54.7,40.8 63.2,28.5 51.3,37 45.7,6 40.4,37.2 28.2,28.5 36.6,40.8 5.7,46.1 36.6,51.8 28.2,63.6 40.4,55.2 45.7,86.1 51.4,55.4 63.2,63.6"/></svg>
+            </div>
+            <img src={myImg} alt="Cam Keyser Photo" />
           </div>
           <div className="intro-right">
               <h2>Hello, I'm Cam</h2>

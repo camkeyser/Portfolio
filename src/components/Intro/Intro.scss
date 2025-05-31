@@ -36,10 +36,16 @@
         );
         border-radius: 50% 0 0 0;
         padding-top: 50px;
+        position: relative;
 
         img {
             width: 100%;
             transform: translateY(5px);
+        }
+        .sparkle {
+          position: absolute;
+          right: 0;
+          transform: translateX(50%);
         }
     }
 
@@ -63,6 +69,13 @@
   }
 
   // Media Queries
+  @media (min-width: 1850px) {
+    .sparkle svg {
+      height: 300px;
+      width: 300px;
+    }
+  }
+
   @media (max-width: 1550px) {
     .intro-section .inner-contain {
       align-items: flex-start;
