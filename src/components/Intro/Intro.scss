@@ -28,6 +28,7 @@
 
     .intro-left {
         width: calc(30% - 50px);
+        max-width: 360px;
         background-image: linear-gradient(
             to right,
             #162d57 0%,
@@ -37,6 +38,7 @@
         border-radius: 50% 0 0 0;
         padding-top: 50px;
         position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -68,8 +70,19 @@
     }
   }
 
+
+
+  
+
   // Media Queries
-  @media (min-width: 1850px) {
+  @media (min-width: 1500px) {
+    .intro-section .inner-contain {
+      justify-content: center;
+      gap: 0 75px;
+  }
+  }
+
+  @media (min-width: 1500px) {
     .sparkle svg {
       height: 300px;
       width: 300px;
