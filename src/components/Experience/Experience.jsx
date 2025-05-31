@@ -4,7 +4,7 @@ import rrpartners from '../../assets/webp/rr.webp';
 import oozle from '../../assets/webp/oozle.webp';
 import nfinite from '../../assets/webp/nfinite.webp';
 import bp from '../../assets/webp/bp.webp';
-import boost from '../../assets/webp/boost.webp';
+import cklogo from '../../assets/webp/ck.webp';
 
 export default function Experience() {
   return (
@@ -13,7 +13,21 @@ export default function Experience() {
 
       <div className="experience-item">
         <div className="experience-icon">
-          <img src={rrpartners} alt="Oozle Media" />
+          <img src={cklogo} alt="Freelance" />
+        </div>
+        <div className="experience-content">
+          <p className="experience-title">Full Stack Developer</p>
+          <p className="experience-company">Freelance Development</p>
+          <p className="experience-dates">Nov 2024 - Present • Herriman, UT</p>
+          <ul className="experience-description">
+            <li>Build and maintain websites for clients. As well as providing updates, support, and technical help as needed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="experience-item">
+        <div className="experience-icon">
+          <img src={rrpartners} alt="R&R Partners" />
         </div>
         <div className="experience-content">
           <p className="experience-title">Digital Developer</p>
@@ -64,7 +78,7 @@ export default function Experience() {
 
       <div className="experience-item">
         <div className="experience-icon">
-          <img src={nfinite} alt="Oozle Media" />
+          <img src={nfinite} alt="Nfinite Sites" />
         </div>
         <div className="experience-content">
           <p className="experience-title">Full Stack Developer</p>
@@ -88,7 +102,7 @@ export default function Experience() {
 
       <div className="experience-item">
         <div className="experience-icon">
-          <img src={bp} alt="Oozle Media" />
+          <img src={bp} alt="Business Promotion" />
         </div>
         <div className="experience-content">
           <p className="experience-title">Full Stack Developer / Technical Support</p>
