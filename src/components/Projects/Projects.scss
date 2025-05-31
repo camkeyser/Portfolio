@@ -130,6 +130,12 @@ body .is-compact .fancybox__content {
   }
 }
 
+@media (max-width: 1900px) {
+  #projects .projects-grid>a {
+    flex: 0 0 calc((100% - 60px) / 3);
+  }
+}
+
 @media (max-width: 1500px) {
   .section-transition-top {
     margin-bottom: -13%;
